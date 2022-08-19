@@ -1,0 +1,26 @@
+body{
+    font-family: Arial;
+}
+
+h1, h2{
+    color:darkturquoise;
+}
+
+ul li a {
+    color: orange;
+}
+
+ol li a {
+    color: hotpink;
+}
+
+#p1{
+    color: orangered;
+    font-weight: bold;
+}
+
+.p2{
+    color: rgb(0, 4, 255);
+    font-weight: bold;
+}
+

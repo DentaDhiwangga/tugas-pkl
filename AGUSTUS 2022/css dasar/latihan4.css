@@ -1,0 +1,11 @@
+h1{
+    font-family: monospace;
+    font-size: 100px;
+    font-weight: normal;
+    font-variant: small-caps;
+    font-style: italic;   
+}
+p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: normal;
+}

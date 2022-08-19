@@ -1,0 +1,15 @@
+CSS sendiri adalah singkatan dari Cascading Style Sheet. 
+Markup language ini biasanya dipasangkan dengan markup language (bahasa marka) seperti HTML.
+
+Cascading Style Sheet merupakan aturan untuk mengatur beberapa komponen dalam sebuah web 
+sehingga akan lebih terstruktur dan seragam. CSS bukan merupakan bahasa pemograman
+
+CSS bekerja saat sebuah browser menampilkan dokumen, sebabnya pada waktu itu browser harus 
+menggabungkan konten dokumen dengan gaya informasi atau gaya presentasi dalam halaman sebuah situs.
+
+CSS dapat digunakan: 1.Aturan yang digunakan untuk menampilkan elemen/tag HTML
+                     2.Dibuat terpisah dengan HTML.
+                     3.Bertujuan untuk memisahkan konten dan style.
+                     4. 1 CSS dapat digunakan untuk banyak halaman HTML.
+                     5. 1 halaman HTML dapat terlihat berbeda jika menggunakan CSS yang berbeda pula.
+                     

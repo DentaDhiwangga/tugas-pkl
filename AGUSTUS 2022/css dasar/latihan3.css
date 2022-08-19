@@ -1,0 +1,27 @@
+h1{
+    color:blue;
+    font-size: 100px;
+    font-family: fantasy;
+}
+
+h2{
+    color: orange;
+    font-size: medium;
+    font-family: sans-serif;
+}
+
+h3{
+    color: rebeccapurple;
+    font-size: medium;
+    font-family: sans-serif;
+}
+h4{
+    color:brown;
+    font-size: medium;
+    font-family: sans-serif;
+}
+h5{
+    color:skyblue;
+    font-size: medium;
+    font-family: sans-serif;
+}

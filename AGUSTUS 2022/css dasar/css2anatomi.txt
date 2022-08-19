@@ -1,0 +1,11 @@
+selector { property: value; }
+1. SELECTOR
+    Selector adalah sebuah bagian bagian dari CSS yang digunakan untuk memilih 
+    dan memanipulasi elemen spesifik pada HTML. Selector digunakan 
+        1. Untuk memilih dan memanipulasi elemen spesifik dalam HTML.
+        2. Dipilih berdasarkan tag id,class bahkan pola/pattern.
+        3. Semakin kompleks struktur HTML, Selector juga bisa semakin kompleka/spesifik.
+2. PROPERTY
+    Property adalah jenis style atau element yang akan di ubah dalam sebuah tag HTML.
+3. Value adalah nilai dari Property.     
+
