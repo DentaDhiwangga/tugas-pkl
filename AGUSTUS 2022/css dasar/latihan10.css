@@ -1,0 +1,14 @@
+p { color: red;}
+p { color :green;}
+
+h2 {
+    color: dodgerblue;
+}
+
+ul#sarapan li {
+    color: green;
+}
+
+ul#sarapan li.faforit {
+    color: red;
+}
