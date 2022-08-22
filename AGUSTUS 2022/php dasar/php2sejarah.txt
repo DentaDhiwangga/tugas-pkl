@@ -1,0 +1,23 @@
+PHP pertama kali dibuat oleh Rasmus Lerdorf pada tahun 1994. Pada waktu itu PHP masih 
+bernama Form Interpreted (FI), yang wujudnya berupa sekumpulan skrip yang digunakan untuk
+mengolah data formulir dari web. Selanjutnya Rasmus merilis kode sumber tersebut untuk 
+umum dan menamakannya PHP/FI.
+    Pada tahun 1995 beliau menciptakan PHP Tools v.1,
+    Kemudian 2 tahun kemudian dia menciptakan lagi PHP Tools v.2,
+Nah pada tahun 1998 ada 2 orang membantu membuat PHP 3
+  1. Zeev Suraski
+  2. AndiGutmans
+Dua orang ini yang nantinya membuat perusahaan yang bernama Zend Technologies dan kemudian muncul 
+PHP V4 dan PHP V5.
+Pada Juni 2004, Zend merilis PHP 5.0. Dalam versi ini, inti dari interpreter PHP mengalami perubahan
+besar. Versi ini juga memasukkan model pemrograman berorientasi objek ke dalam PHP untuk menjawab 
+perkembangan bahasa pemrograman ke arah paradigma berorientasi objek. Server web bawaan ditambahkan
+pada versi 5.4 untuk mempermudah pengembang menjalankan kode PHP tanpa menginstall software server.
+
+    • extensi file PHP
+    • ditulis dalam tag PHP
+        • delimiter
+        • diawali dengan<?php
+        • diakhiri dengan ?>
+    • bisa digunakan bersamaan dengan HTML
+    • mengikuti bahasa C    

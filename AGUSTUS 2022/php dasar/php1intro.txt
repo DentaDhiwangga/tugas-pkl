@@ -1,0 +1,33 @@
+# PHP-Dasar
+Mengenal & Belajar PHP Dasar
+
+PENGERTIAN PHP
+PHP  (PHP: Hypertext Preprocessor) adalah sebuah bahasa pemrograman server side scripting yang bersifat open source.
+Sebagai sebuah scripting language, PHP menjalankan instruksi pemrograman saat proses runtime. Hasil dari instruksi tentu
+akan berbeda tergantung data yang diproses.PHP merupakan bahasa pemrograman server-side, maka script dari PHP nantinya akan
+diproses di server. Jenis server yang sering digunakan bersama dengan PHP antara lain Apache, Nginx, dan LiteSpeed. 
+Selain itu, PHP juga merupakan bahasa pemrograman yang bersifat open source. Pengguna bebas memodifikasi dan mengembangkan
+sesuai dengan kebutuhan mereka.
+
+FUNGSI PHP
+Dalam pembuatan sebuah halaman website, menggunakan HTML dan CSS sudah cukup untuk bisa membuat tampilan web yang statisdan hanya memuat
+konten saja.Namun, HTML dan CSS saja tidak cukup untuk membuat website dengan tampilan yang dapat menyesuaikan dengan berbagai kondisi.
+Selain membuat website lebih dinamis, berikut beberapa fungsi PHP dalam pengembangan website:
+•	Dapat melakukan fungsi-fungsi pada sistem seperti membuat, membuka, membaca, menulis, dan menutup file di server.
+•	Mengumpulkan data formulir, seperti mengambil data-data dari file, menyimpan data, mengirimkan data melalui email, dan mengembalikan data ke pengguna.
+•	Dapat digunakan untuk menambahkan, menghapus, dan mengubah elemen dalam database.
+•	Untuk enkripsi data dan mengontrol akses pengguna.
+
+SINTAKS DASAR PHP
+PHP dapat ditempatkan di mana saja dalam sebuah dokumen. Sintaks dasarnya dimulai dengan <?php dan ditutup dengan ?>.
+Variabel perintah pada PHP diakhiri dengan simbol titik koma ;Inilah contoh penulisan sintaks dasar PHP:
+
+[sourcecode lang=”PHP”] <?php
+echo “Selamat datang di Dewaweb”;
+?> [/sourcecode]
+
+Berikut penjelasan kode tersebut:
+•	<?php adalah kode wajib untuk membuka program PHP
+•	echo adalah perintah untuk menampilkan teks
+•	“Selamat datang di Dewaweb”; adalah teks yang hendak ditampilkan dan ditulis antara tanda petik dan diakhiri titik koma
+•	?> adalah kode untuk mengakhiri program PHP dan digunakan saat digabung dengan bahasa pemrograman lain

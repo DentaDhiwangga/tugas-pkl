@@ -1,0 +1,24 @@
+Agar kita dapat menuliskan sintaks PHP untuk membuat web, kita harus siapkan dulu 
+lingkungan pengembangannya.. Lingkungan pengembangannya terdiri dari Web Server, 
+Interpreter dan Database Server.
+
+Skrip sisi server adalah teknik yang digunakan dalam pengembangan web yang melibatkan
+penggunaan skrip pada server web yang menghasilkan respons yang disesuaikan untuk 
+setiap permintaan pengguna ke situs web. Alternatifnya adalah server web itu sendiri 
+untuk mengirimkan halaman web statis.
+
+
+Cara Install XAMPP di Windows
+1). Download aplikasi XAMPP terbaru.
+2). Dobel klik file XAMPP yang baru saja Anda download.
+3). Klik Next pada jendela installer.
+4). Pilih aplikasi yang mau di install.
+5). Pilih folder instalasi.
+6). Pilih bahasa.
+7). Jalankan instalasi.
+8). Tunggu proses instalasi selesai.
+
+Contoh dasar 
+<?php
+    echo "hello world" ;
+?>    
