@@ -5,14 +5,13 @@ Mempelajari HTML Dasar Materi 1
 HTML disebut Hypertext Markup Languange karena didalamnya terdapat serangkaian Markup. 
 Fungsi Markup adalah berfungsi untuk memberitahu broswer bagaimana konten akan ditampilkan.
 HTML Pertama kali diciptakan oleh Tim Berners-Lee pada akhir 1991. Selain HTML Tim Berners-Lee 
-juga menemukan:
--HTTP
--HTML
--WWW
--WEB 
--BROSWER
--WEB SERVER
--WEB PAGE.
+juga menemukan: -HTTP
+                -HTML
+                -WWW
+                -WEB 
+                -BROSWER
+                -WEB SERVER
+                -WEB PAGE.
 
 Tim Berners-Lee Sekarang juga menjadi direktur organisasi yang bernama W3C (WORD WIDE WEB CONSORTIUM).
 World Wide Web Consortium (W3C) adalah komunitas internasional di mana anggota organisasi ,
