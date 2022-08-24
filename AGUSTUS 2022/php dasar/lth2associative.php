@@ -16,11 +16,11 @@ $mahasiswa = [
     "gambar" => "gambar1.jpg"
     ],
     [
-        "nama" => "Aldenta", 
-        "nrp" => " 0843278",
-        "email" => "kjeddi.com",
-        "jurusan" => "Tni",
-        "gambar" => "gambar2.jpg"
+    "nama" => "Aldenta", 
+    "nrp" => " 0843278",
+    "email" => "kjeddi.com",
+    "jurusan" => "Tni",
+    "gambar" => "gambar2.jpg"
     ],
 ];
 
