@@ -1,0 +1,7 @@
+Hosting adalah sistem layanan online untuk mengelola sebuah situs oleh 
+pengguna untuk ditampilkan melalui media internet. Fungsi utama dari 
+penggunaan hosting adalah mampu mengembangkan berbagai website, membuat
+email profesional, dan melindungi situs dengan bantuan SSL.
+
+Dibawah ini alamat website hasil latihan php dasar dalam internet:
+dentakce.000webhostapp.com
