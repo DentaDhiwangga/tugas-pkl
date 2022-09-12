@@ -16,7 +16,7 @@ if (isset($_POST["cari"])) {
 
 
 ?>
-
+<link rel="stylesheet" type="text/css" href="editindex.css">
 <!DOCTYPE html>
 <html>
 
@@ -45,12 +45,13 @@ if (isset($_POST["cari"])) {
 
 <body>
 
-    <a href="logout.php" class="logout">Logout</a> | <a href="cetak.php" target="_blank">Cetak</a>
+    <a href="logout.php" class="logout">Logout</a> | <a href="cetak.php" target="_blank">Cetak</a>  |
 
-    <h1>Daftar Mahasiswa</h1>
+    
 
     <a href="tambah.php" class="tambah">Tambah Data Mahasiswa</a>
     <br><br>
+    <h1>Daftar Mahasiswa</h1>
 
     <form action="" method="post" class="form-cari">
 
@@ -61,17 +62,17 @@ if (isset($_POST["cari"])) {
 
 
     </form>
-    <br><br>
+    <br>
     <div id="container">
         <table border="1" cellpadding="10" cellspacing="0">
             <tr>
-                <td>No.</td>
-                <td class="aksi">Aksi</td>
-                <td>Gambar</td>
-                <td>NRP</td>
-                <td>Nama</td>
-                <td>Email</td>
-                <td>Jurusan</td>
+                <th>No.</th>
+                <th class="aksi">Aksi</th>
+                <th>Gambar</th>
+                <th>NRP</th>
+                <th>Nama</th>
+                <th>Email</thd>
+                <th>Jurusan</th>
             </tr>
 
             <?php $i = 1; ?>
@@ -79,9 +80,9 @@ if (isset($_POST["cari"])) {
                 <tr>
                     <td><?= $i; ?> </td>
                     <td class="aksi">
-                        <a href="ubah.php?id=<?= $row["id"]; ?>">ubah</a> |
+                        <a href="ubah.php?id=<?= $row["id"]; ?>"> <input type='=button' class='btn-ubah'> </a> |
                         <a href="hapus.php?id=<?= $row["id"]; ?>" onclick="
-            return confirm('yakin?');">hapus</a>
+            return confirm('yakin?');"> <input type='=button' class='btn-delete'> </a>
                     </td>
 
                     <td><img src="img/<?= $row["gambar"]; ?>" width="50"></td>
