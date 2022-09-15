@@ -8,6 +8,28 @@ $database = "dbcrud2022";
 // buat koneksi
 $koneksi = mysqli_connect($server, $user, $password, $database) or die(mysqli_error($koneksi));
 
+// // kode otomatis
+// $q = mysqli_query ($koneksi, "SELECT kode FROM tguru order by kode desc limit 1");
+// $datax = mysqli_fetch_array($q);
+// if($datax) {
+//     $no_terakhir = substr($datax['kode'], -3);
+//     $no = $no_terakhir + 1;
+
+//     if ($no > 0 and $no < 10) {
+//         $kode = "00". $no;
+//     } else if ($no > 10 and $no < 100) {
+//         $kode = "0". $no;
+//     } else if ($no > 100) {
+//         $kode = $no;
+//     }
+// } else {
+//     $kode = "001";
+// }
+
+// $tahun = date('Y');
+// $vkode = "IVN-" . $tahun .'-' . $kode;
+// // INV-2022-001
+
 
 // jika tombol simpan diklik
 if(isset($_POST['bsimpan'])){
@@ -15,9 +37,10 @@ if(isset($_POST['bsimpan'])){
     // pengujian apakah data akan diedit atau disimpan baru
     if(isset($_GET['hal']) == "edit") {
         // data akan diedit
-        $edit = mysqli_query($koneksi, "UPDATE tabelguru SET
+        $edit = mysqli_query($koneksi, "UPDATE tguru SET
                                                kode = '$_POST[tkode]',
                                                nama = '$_POST[tnama]',
+                                               alamats = '$_POST[talamat]',
                                                asal = '$_POST[tasal]',
                                                usia = '$_POST[tusia]',
                                                bidang = '$_POST[tbidang]',
@@ -40,9 +63,10 @@ if(isset($_POST['bsimpan'])){
 
     }else{
          // data akan disimpan baru
-    $simpan = mysqli_query($koneksi, " INSERT INTO tabelguru (kode, nama, asal, usia, bidang, tanggal_lahir)
+    $simpan = mysqli_query($koneksi, " INSERT INTO tguru (kode, nama, alamat, asal, usia, bidang, tanggal_lahir)
                                         VALUE ( '$_POST[tkode]',
                                                 '$_POST[tnama]',
+                                                '$_POST[talamat]',
                                                 '$_POST[tasal]',
                                                 '$_POST[tusia]',
                                                 '$_POST[tbidang]',
@@ -66,6 +90,7 @@ if(isset($_POST['bsimpan'])){
 // deklarasi variabel untuk menampung data yang akan diedit
 $vkode = "";
 $vnama = "";
+$valamat = "";
 $vasal = "";
 $vusia = "";
 $vbidang = "";
@@ -82,12 +107,13 @@ if (isset($_GET['hal'])) {
     if($_GET['hal'] == "edit") {
 
         // tampilkan data yang akan diedit
-        $tampil = mysqli_query($koneksi, "SELECT * FROM tabelguru WHERE id_guru = '$_GET[id]' ");
+        $tampil = mysqli_query($koneksi, "SELECT * FROM tguru WHERE id_guru = '$_GET[id]' ");
         $data = mysqli_fetch_array($tampil);
         if($data){
             // jika data ditemukan maka, data ditampung ke dalam divariabel
             $vkode = $data['kode'];
             $vnama = $data['nama'];
+            $valamat = $data['alamat'];
             $vasal = $data['asal'];
             $vusia = $data['usia'];
             $vbidang = $data['bidang'];
@@ -96,7 +122,7 @@ if (isset($_GET['hal'])) {
         }
     } else if ($_GET['hal'] == "hapus") {
         // persiapan hapus data
-        $hapus = mysqli_query($koneksi, "DELETE FROM tabelguru WHERE id_guru = '$_GET[id]' ");
+        $hapus = mysqli_query($koneksi, "DELETE FROM tguru WHERE id_guru = '$_GET[id]' ");
         //uji jika hapus data sukses
         if($hapus){
             echo "<script>
@@ -131,7 +157,7 @@ if (isset($_GET['hal'])) {
   <body>
 <!-- awal container -->
 <div class="container">
-    <h3 class="text-center">Data Guru</h3>
+    <h3 class="text-center">Update Data Guru</h3>
     <h3 class="text-center">SMK Penerbangan Lahud Iswahjudi</h3>
 <!-- awal row -->
     <div class="row">
@@ -157,14 +183,17 @@ if (isset($_GET['hal'])) {
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label">Asal Guru</label>
+                        <label class="form-label">Alamat</label>
+                        <input type="text" name="talamat" value="<?= $valamat ?>" class="form-control" placeholder="Masukan Alamat Anda">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Jenis Kelamin</label>
                         <select class="form-select" name="tasal">
                             <option value="<?= $vasal ?>"><?= $vasal ?></option>
-                            <option value="Madiun">Madiun</option>
-                            <option value="Magetan">Magetan</option>
-                            <option value="Ngawi">Ngawi</option>
-                            <option value="Pacitan">Pacitan</option>
-                            <option value="Ponorogo">Ponorogo</option>
+                            <option value="Laki-Laki">Laki-Laki</option>
+                            <option value="Perempuan">Perempuan</option>
+                          
                         </select>                   
                     </div>
 
@@ -193,7 +222,7 @@ if (isset($_GET['hal'])) {
 
                         <div class="col">
                             <div class="mb-3">
-                                <label class="form-label">Tanggal Lahir</label>
+                                <label class="form-label">Tanggal Mengisi</label>
                                 <input type="date" name="ttanggal_lahir"  value="<?= $vtanggal_lahir ?>" class="form-control" placeholder="Masukan Umur Anda">
                             </div>
                         </div>
@@ -230,7 +259,7 @@ if (isset($_GET['hal'])) {
                             <div class="input-group mb-3">
                                 <input type="text" name="tcari" class="form-control" 
                                 placeholder="Masukan kata kunci">
-                                <button class="btn btn-primary" name="bcari" type="submit">Cari</button>
+                                <button class="btn btn-primary" value="<?= @$_POST['tcari'] ?>" name="bcari" type="submit">Cari</button>
                                 <button class="btn btn-danger" name="breset"type="submit">Reset</button>
                             </div>
                         </form>
@@ -241,10 +270,11 @@ if (isset($_GET['hal'])) {
                             <th>No.</th>
                             <th>Kode guru</th>
                             <th>Nama Guru</th>
-                            <th>Asal Guru</th>
+                            <th>Alamat</th>
+                            <th>Jenis kelamin</th>
                             <th>Usia</th>
                             <th>Bidang</th>
-                            <th>Tanggal Lahir</th>
+                            <th>Tanggal Mengisi</th>
                             <th>Aksi</th>
                         </tr>
                         <?php
@@ -255,10 +285,10 @@ if (isset($_GET['hal'])) {
                         if(isset($_POST['bcari'])) {
                             // tampilkan data yang dicari
                             $keyword = $_POST['tcari'];
-                            $q = "SELECT  * FROM tabelguru WHERE kode like '%$keyword%' or nama like '%$keyword%'  or asal like '%$keyword%' order by
+                            $q = "SELECT  * FROM tguru WHERE kode like '%$keyword%' or nama like '%$keyword%'  or asal like '%$keyword%' order by
                             id_guru desc ";
                         } else {
-                            $q = "SELECT * FROM tabelguru order by id_guru desc";
+                            $q = "SELECT * FROM tguru order by id_guru desc";
                         }
 
                         $tampil = mysqli_query($koneksi, $q);
@@ -269,6 +299,7 @@ if (isset($_GET['hal'])) {
                             <td><?= $no++ ?></td>
                             <td><?= $data['kode']?></td>
                             <td><?= $data['nama']?></td>
+                            <td><?= $data['alamat']?></td>
                             <td><?= $data['asal']?></td>
                             <td><?= $data['usia']?></td>
                             <td><?= $data['bidang']?></td>
@@ -291,6 +322,13 @@ if (isset($_GET['hal'])) {
                 </div>
             </div>
 <!-- akhir card -->
+<br>
+<button onclick="goBack()">Go Back</button>
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
 
 
 
